@@ -16,8 +16,6 @@ def read_data(filename):
         list: le contenu du fichier (1 list par ligne)
     """
     name = filename
-    with open(name, mode='r', encoding='utf8') as f:
-        l = f.readlines()
     with open(name, 'r', encoding='utf8') as f:
         r = csv.reader(f, delimiter=';')
         l = list(r)
